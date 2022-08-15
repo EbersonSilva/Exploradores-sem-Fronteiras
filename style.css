@@ -24,6 +24,11 @@
   font: 400 var(--subtitle-font-size) var(--body-font);
 }
 
+#header .container{
+  padding: 0;
+  
+}
+
 #header .nav-item a,
 #header .btn-login {
   color: var(--dark-color);
@@ -113,6 +118,7 @@
 #home .row {
   text-align: center;
   padding: 2rem;
+  margin-top: 6rem;
 }
 
 #home h1 {

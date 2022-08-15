@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exploradores sem fronteiras</title>
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- css -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header
+      class="fixed-top"
+      id="header"
+      
+    >
+      <nav class="navbar navbar-expand-lg navbar-light container" style="padding: 3px;">
+        <div class="container-fluid">
+          <a class="navbar-brand logo" href="#" style="padding: 0px;"
+            ><img src="images/logoexploradores.svg" alt="" height="60px" style="padding: 0px;"
+          /></a>
+          <button
+            class="navbar-toggler btn-menu"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="bi bi-list"></i>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarNavAltMarkup"
+          >
+            <ul
+              class="nav navbar-nav justify-content-end"
+              
+            >
+              <li class="nav-item">
+                <a class="nav-link" href="#home">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">Sobre</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Conteudo
+                </a>
+                <ul class="dropdown-menu bg-dark">
+                  <li><a class="dropdown-item" href="#">Arqueologia</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Oceanografia</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Astronomia</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Ufologia</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">O Código de Pedras</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Turismo</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Cursos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Suporte</a>
+              </li>
+            </ul>
+            <button class="btn-login" type="submit">Acessar 
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-person-circle icon" viewBox="0 0 16 16">
+              <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+              <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+            </svg>
+          </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- end header -->
+    <main>
+      <!-- Section Home -->
+      <section class="section" id="home" style="border: 1px solid red;">
+        <video autoplay muted loop id="myVideo" >
+<source src="images/fundo2.mp4" type="video/mp4">
+        </video>
+        <div class="container" style="border: 1px solid red;">
+          <div class="row">
+            <h1>Mundos<br>desconhecidos</h1>
+            <h3>Desde o planeta terra até o cosmo infinito</h3>
+            <p>
+              Participe no desvendar do desconhecido.<br />
+              Venha ser um explorador sem fronteiras!
+            </p>
+            <div class="buttons ">
+                <button type="button" class="btn-1">
+                  Cadastre-se Gratuitamente
+                </button>
+                  <button type="button" class="btn-2">
+                    Conheça o nosso App
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </video>
+      </section>
+
+      <!-- About section  -->
+      <section class="section" id="cards" >
+        <div class="container">
+          <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+              <div class="card">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">O Universo</h5>
+                  <p class="card-text">Participe da exploração do Universo e da busca por vida fora da Terra, e conheça os fenômenos inexplicáveis dos OVNIs.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">O Código de Pedras</h5>
+                  <p class="card-text">Encontre mensagens através de grandes estruturas megalíticas em nosso planeta.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Planeta Terra</h5>
+                  <p class="card-text">Conheça os grandes achados arqueológicos na superfície de nosso planeta e no leito dos oceanos.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+     
+
+      <!-- botão para voltar ao inicio -->
+    <a href="#home" class="back-to-top "><i class="icon-arrow-up"></i></a>
+     
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"
+      ></script>
+      <!-- main.js -->
+    <script src="main.js"></script>
+    </main>
+  </body>
+</html>

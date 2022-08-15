@@ -1,0 +1,269 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Colors  */
+  --dark-color: #222216;
+  --gray-color: #b4b7ab;
+  --light-color: #f2efdf;
+  --brown-color: #402e1e;
+  --brown-second-color: #9b6e4f;
+
+  /* Font */
+  --body-font: 'Public Sans', sans-serif;
+  --subtitle-font-size: 1rem;
+  --title-font-size: 3.5rem;
+}
+
+#header {
+  background-color: var(--light-color);
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.6);
+  font: 400 var(--subtitle-font-size) var(--body-font);
+}
+
+#header .nav-item a,
+#header .btn-login {
+  color: var(--dark-color);
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+#header .btn-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  background-color: var(--brown-second-color);
+  color: var(--light-color);
+  border: none;
+}
+
+#header .icon {
+  margin-left: 0.5rem;
+}
+
+/* Botão subir ao topo */
+.back-to-top {
+  background: red;
+  color: white;
+
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+
+  padding: 0.5rem;
+  clip-path: circle();
+
+  font-size: 3rem;
+  line-height: 0;
+  visibility: hidden;
+  opacity: 0;
+
+  transition: 0.3s;
+  transform: translateY(100%);
+}
+
+.back-to-top.show {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* #header {
+  visibility: hidden;
+  opacity: 0;
+
+  transition: 0.3s;
+  transform: translateY(100%);
+}
+
+#header.show {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+} */
+
+/***************** Section Home  ***************/
+
+#myVideo {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: auto;
+}
+#home{
+  margin: 4rem 0;
+}
+
+#home .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: 80vh;
+  width: 100vw;
+  color: var(--light-color);
+  
+}
+
+#home .row {
+  text-align: center;
+  padding: 2rem;
+}
+
+#home h1 {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+#home h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+#home p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+#home .buttons {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#home .btn-1,
+#home .btn-2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.5rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  font: 700 var(--subtitle-font-size) var(--body-font);
+  width: 20rem;
+  margin: 1rem;
+}
+
+/********************* Cards  ***********************/
+
+/* #cards {
+  hrem;
+} */
+
+#cards .card {
+  height: 100%;
+}
+
+/***************** Mobile  *********************/
+@media (max-width: 680px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  #home .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 100vh;
+    width: 100vw;
+    color: var(--light-color);
+  }
+  #home .row {
+    text-align: center;
+  }
+  #myVideo {
+    position: absolute;
+    z-index: -1;
+    width: auto;
+    height: 100%;
+  }
+
+  #home .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5rem;
+  }
+
+  #home .btn-1,
+  #home .btn-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    font: 700 var(--subtitle-font-size) var(--body-font);
+    width: auto;
+  }
+
+  #home h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+  #home h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  #home p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  /***************** section about  ************/
+
+  #about {
+    margin: 3rem 3rem;
+  }
+  #about .card {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 370px) {
+  #myVideo {
+    object-fit: cover;
+    width: 100vw;
+  }
+  #home .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 100vh;
+    width: 100vw;
+    color: var(--light-color);
+  }
+
+  #home h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+  #home h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+
+  #home p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+}

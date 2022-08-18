@@ -17,6 +17,15 @@
   --subtitle-font-size: 1rem;
   --title-font-size: 3.5rem;
 }
+body {
+  font-family: var(--body-font);
+}
+
+body .title {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 3rem;
+  font-weight: 700;
+}
 
 #header {
   background-color: var(--light-color);
@@ -24,9 +33,8 @@
   font: 400 var(--subtitle-font-size) var(--body-font);
 }
 
-#header .container{
+#header .container {
   padding: 0;
-  
 }
 
 #header .nav-item a,
@@ -49,59 +57,54 @@
 
 #header .icon {
   margin-left: 0.5rem;
+  font-size: 1.3rem;
 }
 
-/* Botão subir ao topo */
-.back-to-top {
-  background: red;
-  color: white;
+/************************************** Section Home  **********************************/
 
-  position: fixed;
-  right: 1rem;
-  bottom: 1rem;
-
-  padding: 0.5rem;
-  clip-path: circle();
-
-  font-size: 3rem;
-  line-height: 0;
-  visibility: hidden;
-  opacity: 0;
-
-  transition: 0.3s;
-  transform: translateY(100%);
-}
-
-.back-to-top.show {
-  visibility: visible;
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* #header {
-  visibility: hidden;
-  opacity: 0;
-
-  transition: 0.3s;
-  transform: translateY(100%);
-}
-
-#header.show {
-  visibility: visible;
-  opacity: 1;
-  transform: translateY(0);
-} */
-
-/***************** Section Home  ***************/
-
-#myVideo {
-  position: absolute;
-  z-index: -1;
-  width: 100%;
-  height: auto;
-}
-#home{
+#home {
   margin: 4rem 0;
+}
+
+.video-background-holder {
+  position: relative;
+  background-color: black;
+  height: calc(100vh - 72px);
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.video-background-holder video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.video-background-content {
+  position: relative;
+  z-index: 2;
+}
+
+.video-background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 1;
 }
 
 #home .container {
@@ -112,7 +115,6 @@
   height: 80vh;
   width: 100vw;
   color: var(--light-color);
-  
 }
 
 #home .row {
@@ -159,22 +161,121 @@
   margin: 1rem;
 }
 
-/********************* Cards  ***********************/
+/*************************************** Cards  ********************************************/
 
-/* #cards {
-  hrem;
-} */
+#cards {
+  margin-bottom: 6rem;
+  margin-top: -7.5rem;
+  /* border: 1px solid red; */
+}
 
 #cards .card {
   height: 100%;
+  padding: 1rem;
 }
 
-/***************** Mobile  *********************/
-@media (max-width: 680px) {
-  body {
-    overflow-x: hidden;
-  }
+/* ========================================== */
+/* BOTÃO DO FORMULÁRIO INSCRIÇÃO*/
+/* ========================================== */
 
+#newsletter .col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btnnewsform {
+  border-radius: 0.5rem;
+  padding: 8px 35px;
+  background-color: black;
+  color: white;
+  font-weight: 700;
+  transition: all 0.5s;
+}
+
+.btnnewsform:hover {
+  background-color: #9b6e4f;
+}
+
+/*************************************About  ***********************************************/
+#about {
+  /* border: 1px solid red; */
+  margin: 4rem 0;
+  padding: 5rem 0;
+}
+
+#about .col {
+  padding: 2rem;
+  text-align: center;
+  /* border: 1px solid blue; */
+}
+
+#about h1 {
+  margin-bottom: 2rem;
+  font-size: var(--title-font-size);
+}
+
+#about p {
+  font-size: var(--subtitle-font-size);
+}
+
+/************************************** conteudo *******************************/
+
+#conteudo .row {
+  margin-bottom: 2rem;
+}
+
+#conteudo .card {
+  height: 100%;
+  /* border: 1px solid black; */
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+}
+
+#conteudo .card img {
+  height: 18rem;
+  object-fit: cover;
+}
+
+#conteudo .card .card-body {
+  font-family: var(--body-font);
+  text-align: justify;
+}
+
+.back-to-top {
+  background: var(--brown-color);
+  color: var(--light-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  border: 4px solid var(--light-color);
+  font-size: 2.5rem;
+  line-height: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+  transform: translateY(100%);
+}
+.back-to-top.show {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.back-to-top.show:hover {
+  background-color: var(--light-color);
+  color: var(--brown-color);
+  border-color: var(--brown-color);
+}
+
+/****************************************** Mobile  ****************************************/
+@media (max-width: 680px) {
   #home .container {
     display: flex;
     justify-content: center;
@@ -187,13 +288,24 @@
   #home .row {
     text-align: center;
   }
-  #myVideo {
-    position: absolute;
-    z-index: -1;
-    width: auto;
-    height: 100%;
+
+  #home h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    font-family: 'Times New Roman', Times, serif;
+    /* border: 1px solid red; */
   }
 
+  #home h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  #home p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
   #home .buttons {
     display: flex;
     align-items: center;
@@ -210,66 +322,87 @@
     padding: 1rem;
     border-radius: 0.5rem;
     border: none;
-    font: 700 var(--subtitle-font-size) var(--body-font);
+    font: 400 var(--subtitle-font-size) var(--body-font);
     width: auto;
   }
 
-  #home h1 {
-    font-size: 3rem;
+  /*********************** Cards ****************************/
+
+  #cards {
+    margin: 0;
+  }
+
+  /****************************** About ****************************/
+
+  #about .row {
+    display: block;
+  }
+
+  #about .col {
+    margin-bottom: 3rem;
+  }
+
+  /*************************** conteudo ****************/
+  #conteudo .card {
     margin-bottom: 2rem;
-    text-transform: uppercase;
-    font-family: 'Times New Roman', Times, serif;
+    /* border: 1px solid red; */
   }
 
-  #home h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-  }
-
-  #home p {
-    font-size: 1rem;
-    margin-bottom: 2rem;
-  }
-
-  /***************** section about  ************/
-
-  #about {
-    margin: 3rem 3rem;
-  }
-  #about .card {
-    margin: 0 auto;
+  #conteudo .card img {
+    height: 200px;
   }
 }
 
-@media (max-width: 370px) {
-  #myVideo {
-    object-fit: cover;
-    width: 100vw;
-  }
-  #home .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    height: 100vh;
-    width: 100vw;
-    color: var(--light-color);
-  }
+/******************************* Page Arqueology *-*************************  */
+#archeology,
+#astronomy,
+#oceanography,
+#theStoneCode,
+#ufology {
+  margin-top: 4.5rem;
+}
 
-  #home h1 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    text-transform: uppercase;
-    font-family: 'Times New Roman', Times, serif;
-  }
+#archeology .row,
+#astronomy .row,
+#oceanography .row,
+#theStoneCode .row,
+#ufology .row {
+  display: inline;
+}
 
-  #home h3 {
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
-  }
+#archeology h1,
+#astronomy h1,
+#oceanography h1,
+#theStoneCode h1,
+#ufology h1 {
+  margin-bottom: 2rem;
+  text-align: center;
+}
 
-  #home p {
-    font-size: 1rem;
-    margin-bottom: 2rem;
-  }
+#archeology .img-1,
+.img-2,
+#archeology .img-1,
+.img-2,
+#astronomy .img-1,
+.img-2,
+#oceanography .img-1,
+.img-2,
+#theStoneCode .img-1,
+.img-2,
+#ufology .img-1,
+.img-2 {
+  float: left;
+  height: 20rem;
+  width: 20rem;
+  margin: 1rem;
+  object-fit: cover;
+}
+
+#archeology .img-2,
+#archeology .img-2,
+#astronomy .img-2,
+#oceanography .img-2,
+#theStoneCode .img-2,
+#ufology .img-2 {
+  float: right;
 }

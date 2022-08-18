@@ -1,4 +1,4 @@
-const backToTopButton = document.querySelector('.back-to-top ')
+const backToTopButton = document.querySelector('.back-to-top')
 
 function backToTop() {
   if (window.scrollY >= 1) {
@@ -8,17 +8,7 @@ function backToTop() {
   }
 }
 
-// const menuVisible = document.querySelector('#header ')
-
-// function header() {
-//   if (window.scrollY >= 1) {
-//     menuVisible.classList.add('show')
-//   } else {
-//     menuVisible.classList.remove('show')
-//   }
-// }
 // /* When Scroll*/
-// window.addEventListener('scroll', function () {
-//   backToTop()
-//   header()
-// })
+window.addEventListener('scroll', function () {
+  backToTop()
+})

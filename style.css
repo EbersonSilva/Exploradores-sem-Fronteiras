@@ -367,7 +367,16 @@ body .title {
 #oceanography .row,
 #theStoneCode .row,
 #ufology .row {
-  display: inline;
+  padding: 1rem;
+}
+
+#archeology .row .col,
+#astronomy .row .col ,
+#oceanography .row .col ,
+#theStoneCode .row .col,
+#ufology .row .col {
+  display: flex;
+  justify-content: center;
 }
 
 #archeology h1,
@@ -391,18 +400,9 @@ body .title {
 .img-2,
 #ufology .img-1,
 .img-2 {
-  float: left;
-  height: 20rem;
-  width: 20rem;
-  margin: 1rem;
+  width: 25rem;
+  height: 15rem;
   object-fit: cover;
 }
 
-#archeology .img-2,
-#archeology .img-2,
-#astronomy .img-2,
-#oceanography .img-2,
-#theStoneCode .img-2,
-#ufology .img-2 {
-  float: right;
-}
+

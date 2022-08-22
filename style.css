@@ -200,8 +200,7 @@ body .title {
 /*************************************About  ***********************************************/
 #about {
   /* border: 1px solid red; */
-  margin: 4rem 0;
-  padding: 10rem 0;
+  padding: 1rem 0;
 }
 
 #about .col {

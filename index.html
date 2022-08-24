@@ -24,11 +24,13 @@
     <!-- css -->
     <link rel="stylesheet" href="style.css" />
 
-     <!-- icons -->
-     <link
-     rel="stylesheet"
-     href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
-   />
+    <!-- icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+
+    <link rel="stylesheet" href="icofont/icofont.min.css" />
 
     <!--  -->
     <link
@@ -37,90 +39,20 @@
     />
   </head>
   <body>
-    <header class="fixed-top" id="header">
-      <nav class="navbar navbar-expand-lg navbar-light container">
-        <div class="container-fluid">
-          <a class="navbar-brand logo" href="#"
-            ><img src="images/logoexploradores.svg" alt="" height="60px"
-          /></a>
-          <button
-            class="navbar-toggler btn-menu"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <i class="bi bi-list"></i>
-          </button>
-          <div
-            class="collapse navbar-collapse justify-content-end"
-            id="navbarNavAltMarkup"
-          >
-            <ul class="nav navbar-nav justify-content-end">
-              <li class="nav-item">
-                <a class="nav-link" href="#home">Inicio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#about">Sobre</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Conteudo
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="archeology.html">Arqueologia</a></li>
-                  <li>
-                    <a class="dropdown-item" href="astronomy.html">Astronomia</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="oceanography.html">Oceanografia</a>
-                  </li>
-                  <li><a class="dropdown-item" href="theStoneCode.html">O Código de Pedras</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="ufology.html">Ufologia </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Turismo</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Cursos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Suporte</a>
-              </li>
-            </ul>
-            <a href="login.html" class="btn-login"  type="submit">
-              Acessar
-              <i class="bi bi-person-circle icon"></i>
-            </a>
-          </div>
-        </div>
-      </nav>
-    </header>
-    <!-- end header -->
+    
+    <script id="replace_with_navbar" src="nav.js"></script>
+
     <!-- SEÇÃO HOME-->
     <!-- Background video -->
     <section id="home">
-      <div class="video-background-holder" >
-        <div class="video-background-overlay"></div>
+      <div class="video-background-holder">
         <video
           playsinline="playsinline"
           autoplay="autoplay"
           muted="muted"
           loop="loop"
         >
-          <source src="images/fundo.mp4" type="video/mp4" />
+          <source src="images/capaexploradores.mp4" type="video/mp4" />
           <p>Este browser não suporta video.</p>
         </video>
         <div class="video-background-content container h-100 p-2">
@@ -130,16 +62,48 @@
                 Mundos <br />
                 desconhecidos
               </h1>
-              <h3>Desde o planeta terra até o cosmo infinito</h3>
-              <p>
+              <h3><b>Desde o planeta terra até o cosmo infinito</b></h3>
+              <p style="margin-bottom: 0px">
                 Participe no desvendar do desconhecido.<br />
-                Venha ser um explorador sem fronteiras!
+                Venha ser um
               </p>
-              <div class="buttons">
-                <button type="button" class="btn-1">
+              <p
+                style="
+                  font-family: 'Times New Roman', Times, serif;
+                  text-transform: uppercase;
+                  font-size: 3rem;
+                  margin-bottom: 0px;
+                  margin-top: 0px;
+                "
+              >
+                Explorador
+              </p>
+              <p
+                style="
+                  font-family: 'Public Sans', Times, serif;
+                  text-transform: uppercase;
+                  margin-top: -10px;
+                  letter-spacing: 7px;
+                  margin-bottom: 10px;
+                "
+              >
+                Sem Fronteiras
+              </p>
+              <div class="buttons" style="margin-top: 0px">
+                <button
+                  type="button"
+                  class="btn-1"
+                  onclick="window.location.href='login.html';"
+                >
                   Cadastre-se Gratuitamente
                 </button>
-                <button type="button" class="btn-2">Conheça o nosso App</button>
+                <button
+                  type="button"
+                  class="btn-2"
+                  onclick="window.location.href='https://w3docs.com';"
+                >
+                  Conheça o nosso App
+                </button>
               </div>
             </div>
           </div>
@@ -150,11 +114,11 @@
 
     <!-- SEÇÃO CARDS TÓPICOS  -->
     <section class="section" id="cards">
-      <div class="container" >
+      <div class="container">
         <div class="row row-cols-1 row-cols-md-3 g-4">
           <div class="col">
             <div class="card">
-              <!-- <img src="..." class="card-img-top" alt="..." /> -->
+              <img src="images/space.svg" class="card-img-top" alt="..." />
               <div class="card-body">
                 <h5 class="card-title">O Universo</h5>
                 <p class="card-text">
@@ -166,7 +130,11 @@
           </div>
           <div class="col">
             <div class="card">
-              <!-- <img src="..." class="card-img-top" alt="..." /> -->
+              <img
+                src="images/location-pin.svg"
+                class="card-img-top"
+                alt="..."
+              />
               <div class="card-body">
                 <h5 class="card-title">O Código de Pedras</h5>
                 <p class="card-text">
@@ -178,7 +146,7 @@
           </div>
           <div class="col">
             <div class="card">
-              <!-- <img src="..." class="card-img-top" alt="..." /> -->
+              <img src="images/earth.png" class="card-img-top" alt="..." />
               <div class="card-body">
                 <h5 class="card-title">Planeta Terra</h5>
                 <p class="card-text">
@@ -194,8 +162,8 @@
     <!-- FIM DA SEÇÃO CARDS TÓPICOS  -->
     <!-- SEÇÃO NEWSLETTER -->
     <!-- <section id="newsletter"> -->
-      <!-- START -->
-      <!-- <div
+    <!-- START -->
+    <!-- <div
         class="sib-form"
         style="
           text-align: center;
@@ -380,20 +348,26 @@
     <!-- Section About -->
     <section class="section" id="about">
       <div class="container">
-        <div class="row" >
+        <div class="row" style="border: none">
           <div class="col col-md-6">
             <h1>Quem somos</h1>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, a
-              veniam nesciunt consequuntur obcaecati quidem veritatis laudantium
-              repudiandae, repellat quasi esse hic voluptas nam sed et modi
-              eaque perspiciatis laboriosam.
+              Os Exploradores sem Fronteiras são pessoas comuns que manifestam o
+              interesse de conhecer mais sobre os assuntos tratados na Legião de
+              Exploradores sem Fronteiras, sendo de livre acesso a toda a
+              comunidade científica ou não, desde que se cadastrem na Legião de
+              Exploradores sem Fronteiras.
             </p>
+            <div style="width: 100%; text-align: center; padding-top: 30px">
+              <a class="btnabout" href=""
+                >Veja mais informações <i class="bi bi-arrow-right"></i
+              ></a>
+            </div>
           </div>
           <div class="col col-md-6">
-            <video width="100%" height="auto" controls>
+            <video width="100%" height="320px" controls>
               <source src="movie.mp4" type="video/mp4" />
-              <p>Este browser não suporta este video.</p> 
+              <p>Este browser não suporta este video.</p>
             </video>
             <!-- <img src="https://source.unsplash.com/random/500x500" alt=""> -->
           </div>
@@ -403,102 +377,113 @@
 
     <section class="section" id="conteudo">
       <div class="container">
-        <div class="row row-cols-1 row-cols-md-3 g-4">
+        <h2 style="text-align: center; font-weight: 700; margin-bottom: 40px;">Conheça os nossos campos de atuação</h2>
+        <div class="row row-cols-1 row-cols-md-5 g-4">
           <div class="col">
-            <div class="card">
-              <a href="archeology.html">
-                <img
-                  src="https://source.unsplash.com/random"
-                  class="card-img-top"
-                  alt="..."
-                />
-              </a>
-              <div class="card-body">
+            <a href="archeology.html">
+            <div class="card bg-dark text-white">
+              <img
+                src="images/topicos/arqueologia.jpg"
+                class="card-img"
+                alt="..."
+              />
+              <div
+                class="card-img-overlay d-flex align-items-end justify-content-center"
+              >
                 <h5 class="card-title">Arqueologia</h5>
-                <p class="card-text">
-                  This is a longer card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
-                </p>
               </div>
             </div>
-          </div>
+          </div></a>
           <div class="col">
-            <div class="card">
-              <a href="oceanography.html">
-                <img
-                  src="https://source.unsplash.com/random/"
-                  class="card-img-top"
-                  alt="..."
-                />
-              </a>
-              <div class="card-body">
-                <h5 class="card-title">Oceanografia</h5>
-                <p class="card-text">
-                  This is a longer card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card">
-              <a href="astronomy.html">
-                <img
-                  src="https://source.unsplash.com/random"
-                  class="card-img-top"
-                  alt="..."
-                />
-              </a>
-              <div class="card-body">
+            <a href="astronomy.html">
+            <div class="card bg-dark text-white">
+              <img
+                src="images/topicos/astronomia.jpg"
+                class="card-img"
+                alt="..."
+              />
+              <div
+                class="card-img-overlay d-flex align-items-end justify-content-center"
+              >
                 <h5 class="card-title">Astronomia</h5>
-                <p class="card-text">
-                  This is a longer card with supporting text below as a natural
-                  lead-in to additional content.
-                </p>
               </div>
             </div>
+          </div></a>
+          <div class="col">
+            <a href="oceanography.html">
+            <div class="card bg-dark text-white">
+              <img
+                src="images/topicos/oceanografia.jpg"
+                class="card-img"
+                alt="..."
+              />
+              <div
+                class="card-img-overlay d-flex align-items-end justify-content-center"
+              >
+                <h5 class="card-title">Oceanografia</h5>
+              </div>
+            </div>
+          </div></a>
+          <div class="col">
+            <a href="ufology.html">
+            <div class="card bg-dark text-white">
+              <img
+                src="images/topicos/ufologia.jpg"
+                class="card-img"
+                alt="..."
+              />
+              <div
+                class="card-img-overlay d-flex align-items-end justify-content-center"
+              >
+                <h5 class="card-title">Ufologia</h5>
+              </div>
+            </div>
+          </div></a>
+          <div class="col">
+            <a href="theStoneCode.html">
+            <div class="card bg-dark text-white">
+              <img
+                src="images/topicos/codigopedras.jpg"
+                class="card-img"
+                alt="..."
+              />
+              <div
+                class="card-img-overlay d-flex align-items-end justify-content-center"
+              >
+                <h5 class="card-title">O Código de Pedras</h5>
+              </div>
+            </div></a>
           </div>
         </div>
-        <div class="row row-cols-1 row-cols-md-2 justify-content-center g-4" >
-          <div class="col-md-4" >
-            <div class="card">
-              <a href="ufology.html">
-              <img src="https://source.unsplash.com/random" class="card-img-top" alt="..." />
-            </a>
-              <div class="card-body">
-                <h5 class="card-title">Ufologia</h5>
-                <p class="card-text">
-                  This is a longer card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card">
-              <a href="theStoneCode.html">
-              <img src="https://source.unsplash.com/random" class="card-img-top" alt="..." />
-            </a>
-              <div class="card-body">
-                <h5 class="card-title">O Código de Pedras</h5>
-                <p class="card-text">
-                  This is a longer card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
-                </p>
-              </div>
-            </div>
-          </div>
       </div>
     </section>
 
-   <!-- botão para voltar ao inicio -->
-   <a href="#home" class="back-to-top" title="Voltar ao topo"
-   ><i class="bi bi-arrow-up-short"></i
- ></a>
+    <!-- ======= Call to Action Section ======= -->
+    <section id="cta1" class="about section-bg3"> 
+      <div class="container">
+
+        <div class="row">
+          <div class="col-xl-12 align-items-center" data-aos="fade-up" style="padding: 20px;">
+            <div class="content flex-column justify-content-center" style="text-align: center;">
+              <h3 data-aos="fade-in" data-aos-delay="100">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+              <p data-aos="fade-in" style="margin-top: 20px; font-weight: bold;">Saiba como a Exploradores sem Fronteiras Lorem Ipsum.
+              </p>
+              <p style="margin-top: 30px;">
+              <a href="#" target="_blank" class="btncta1 scrollto" style="font-weight: bold;">Fale com a nossa equipe <i class="icofont-brand-whatsapp"></i></a></p>
+              </div>
+            </div><!-- End .content-->
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Call to Action Section -->
+
+    <script id="replace_with_footer" src="footer.js"></script>
+
+    <!-- botão para voltar ao inicio -->
+    <a href="#home" class="back-to-top" title="Voltar ao topo"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"

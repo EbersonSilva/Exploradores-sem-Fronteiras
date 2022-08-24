@@ -14,7 +14,7 @@
 
   /* Font */
   --body-font: 'Public Sans', sans-serif;
-  --subtitle-font-size: 1rem;
+  --subtitle-font-size: 17px;
   --title-font-size: 3.5rem;
 }
 body {
@@ -48,11 +48,20 @@ body .title {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 0.5rem;
-  padding: 0.5rem;
+  border-radius: 0px;
+  padding: 0.5rem 1.3rem;
+  margin: 5px;
   background-color: var(--brown-second-color);
   color: var(--light-color);
   border: none;
+  text-decoration: none;
+  transition: all 0.8s;
+}
+
+#header .btn-login:hover {
+  border: none;
+  background-color: #000;
+  color: #fff;
 }
 
 #header .icon {
@@ -60,20 +69,34 @@ body .title {
   font-size: 1.3rem;
 }
 
+#header .nav-item .nav-link {
+  color: #000;
+  font-family: 'Public Sans';
+  font-size: 15px;
+  transition: 0.8s;
+  border-bottom: solid 3px transparent;
+  margin: 0px 4px;
+}
+
+#header .nav-item .nav-link:hover {
+  color: #9b6e4f;
+  font-family: 'Public Sans';
+  border-color: #9b6e4f;
+}
+
 /************************************** Section Home  **********************************/
 
 #home {
-  margin: 4rem 0;
+  margin-top: 3.7rem;
 }
 
 .video-background-holder {
   position: relative;
   background-color: black;
-  height: calc(100vh - 72px);
+  height: calc(680px);
   min-height: 25rem;
   width: 100%;
   overflow: hidden;
-  z-index: -1;
 }
 
 .video-background-holder video {
@@ -84,7 +107,6 @@ body .title {
   min-height: 100%;
   width: auto;
   height: auto;
-  z-index: -1;
   -ms-transform: translateX(-50%) translateY(-50%);
   -moz-transform: translateX(-50%) translateY(-50%);
   -webkit-transform: translateX(-50%) translateY(-50%);
@@ -119,24 +141,25 @@ body .title {
 
 #home .row {
   text-align: center;
-  padding: 2rem;
-  margin-top: 6rem;
+  padding: 1.5rem;
+  margin-top: 0rem;
 }
 
 #home h1 {
-  font-size: 4rem;
+  font-size: 4.5rem;
   margin-bottom: 2rem;
+  letter-spacing: -2px;
   text-transform: uppercase;
   font-family: 'Times New Roman', Times, serif;
 }
 
 #home h3 {
-  font-size: 2rem;
+  font-size: 1.7rem;
   margin-bottom: 1rem;
 }
 
 #home p {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin-bottom: 2rem;
 }
 
@@ -147,7 +170,26 @@ body .title {
   justify-content: center;
 }
 
-#home .btn-1,
+#home .btn-1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.5rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  font: 700 var(--subtitle-font-size) var(--body-font);
+  width: 20rem;
+  margin: 1rem;
+  transition: all 0.8s;
+}
+
+#home .btn-1:hover {
+  border: none;
+  background-color: #9b6e4f;
+  color: #fff;
+}
+
 #home .btn-2 {
   display: flex;
   align-items: center;
@@ -159,19 +201,50 @@ body .title {
   font: 700 var(--subtitle-font-size) var(--body-font);
   width: 20rem;
   margin: 1rem;
+  transition: all 0.8s;
+}
+
+#home .btn-2:hover {
+  border: none;
+  background-color: #9b6e4f;
+  color: #fff;
 }
 
 /*************************************** Cards  ********************************************/
 
 #cards {
-  margin-bottom: 6rem;
-  margin-top: -7.5rem;
+  /* margin-bottom: 6rem; */
+  margin-top: -6rem;
   /* border: 1px solid red; */
 }
 
 #cards .card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* text-align: center; */
   height: 100%;
   padding: 1rem;
+  border: solid 1px #ccc;
+  transition: all 0.8s;
+}
+
+#cards .card:hover {
+  border-color: #9b6e4f;
+}
+
+#cards .card-img-top {
+  color: #000;
+  height: 3rem;
+  width: 3rem;
+}
+
+#conteudo .card {
+  transition: all 0.8s;
+}
+
+#conteudo .card:hover {
+  opacity: 0.8;
 }
 
 /* ========================================== */
@@ -199,23 +272,40 @@ body .title {
 
 /*************************************About  ***********************************************/
 #about {
-  /* border: 1px solid red; */
-  padding: 1rem 0;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  border: none;
 }
 
 #about .col {
-  padding: 2rem;
+  padding: 1rem;
   text-align: center;
   /* border: 1px solid blue; */
 }
 
 #about h1 {
+  font-weight: 800;
   margin-bottom: 2rem;
   font-size: var(--title-font-size);
+  letter-spacing: -2px;
 }
 
 #about p {
   font-size: var(--subtitle-font-size);
+}
+
+.btnabout {
+  background-color: #402e1e;
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 35px;
+  margin-top: 50px;
+  transition: all 0.8s;
+}
+
+.btnabout:hover {
+  background-color: #000;
+  color: #fff;
 }
 
 /************************************** conteudo *******************************/
@@ -226,9 +316,8 @@ body .title {
 
 #conteudo .card {
   height: 100%;
-  /* border: 1px solid black; */
   box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.3);
-  padding: 1rem;
+  border: none;
 }
 
 #conteudo .card img {
@@ -253,7 +342,7 @@ body .title {
   width: 3.5rem;
   height: 3.5rem;
   border-radius: 50%;
-  border: 4px solid var(--light-color);
+  border: 2px solid var(--light-color);
   font-size: 2.5rem;
   line-height: 0;
   visibility: hidden;
@@ -271,6 +360,18 @@ body .title {
   background-color: var(--light-color);
   color: var(--brown-color);
   border-color: var(--brown-color);
+}
+
+.card-title {
+  text-align: center;
+  font-family: 'Public Sans';
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 17px;
+  text-align: center;
 }
 
 /****************************************** Mobile  ****************************************/
@@ -337,10 +438,6 @@ body .title {
     display: block;
   }
 
-  #about .col {
-    margin-bottom: 3rem;
-  }
-
   /*************************** conteudo ****************/
   #conteudo .card {
     margin-bottom: 2rem;
@@ -383,6 +480,7 @@ body .title {
 #oceanography h1,
 #theStoneCode h1,
 #ufology h1 {
+  font-weight: 800;
   margin-bottom: 2rem;
   text-align: center;
 }
@@ -409,16 +507,16 @@ body .title {
   height: 100%;
 }
 
-/************************** Login ******************************/
+/************************** Page Login ******************************/
 
-#login .row {
+#login {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100vh;
 }
 
 #login .form-signin {
-  height: 30rem;
   width: 30rem;
   text-align: center;
   border-radius: 0.5rem;
@@ -427,6 +525,132 @@ body .title {
 }
 
 #login .btn-back {
-  font-size: 50px;
-  color: var(--brown-color);
+  background: var(--brown-second-color);
+  color: var(--light-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  left: 1rem;
+  top: 1rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  border: 4px solid var(--light-color);
+  font-size: 2.5rem;
+  line-height: 0;
+}
+
+#login .btn-back:hover {
+  background-color: var(--light-color);
+  color: var(--brown-second-color);
+  border-color: var(--brown-second-color);
+}
+
+#login .btn-login {
+  background-color: var(--brown-second-color);
+  border: none;
+  border-radius: 0.5rem;
+  height: 3rem;
+  color: var(--light-color);
+  font: bold 1rem var(--body-font);
+  transition: all 0.4s;
+}
+
+#login .btn-login:hover {
+  background-color: var(--light-color);
+  color: var(--brown-second-color);
+  border: 3px solid var(--brown-second-color);
+}
+
+/* ============== SEÇÃO CTA1 ================== */
+
+#cta1 {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #402e1e;
+  color: #fff;
+}
+
+.btncta1 {
+  background-color: #fff;
+  color: #000;
+  padding: 12px 35px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: all 0.8s;
+}
+
+.btncta1:hover {
+  background-color: #9b6e4f;
+  color: #fff;
+}
+
+/* ============== CONTACT ================== */
+
+#contact {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+#contact h1 {
+  font-weight: 700;
+}
+
+.btn-login {
+  background-color: var(--brown-second-color);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 12px 35px;
+  height: 3rem;
+  color: var(--light-color);
+  font: bold 1rem var(--body-font);
+  transition: all 0.4s;
+}
+
+.btn-login:hover {
+  background-color: var(--light-color);
+  color: var(--brown-second-color);
+  border: 3px solid var(--brown-second-color);
+}
+
+/********************************Page Archeology *************************** */
+
+#archeology img .card-img {
+  display: block;
+}
+
+#archeology .card:hover {
+  opacity: 0.8;
+  /* transform: scale(1.02); */
+}
+
+#archeology .card:hover .card-img {
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.item-zoom {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  width: 400px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.item-zoom img {
+  vertical-align: top;
+  max-width: 100%;
+  -moz-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.item-zoom:hover img {
+  -moz-transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
 }

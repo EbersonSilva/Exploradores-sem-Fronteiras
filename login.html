@@ -21,48 +21,55 @@
 
   <body>
     <section class="section" id="login">
+      <a href="index.html"
+        ><i class="bi bi-arrow-left-short btn-back" title="voltar"></i
+      ></a>
       <div class="container">
-        <a href="index.html"><i class="bi bi-caret-left btn-back"></i></a>
         <div class="row">
           <main class="form-signin m-auto">
             <form>
               <img
-                class="mb-4"
+                class="mb-3 mt-4"
                 src="images/logoexploradores.svg"
                 alt=""
                 width="320"
                 height="70"
               />
-              <h1 class="h3 mb-3 fw-normal">Cadastre-se</h1>
+              <h1 class="h3 mb-3 fw-normal">Acesse a sua conta</h1>
 
-              <div class="form-floating">
+              <div class="p-2">
+                <label for="floatingInput">Email</label>
                 <input
                   type="email"
                   class="form-control"
                   id="floatingInput"
-                  placeholder="nome@examplo.com"
+                  placeholder="nome@example.com"
                 />
-                <label for="floatingInput">Email</label>
               </div>
-              <div class="form-floating">
+              <div class="p-2">
+                <label for="floatingPassword">Senha</label>
                 <input
                   type="password"
                   class="form-control"
                   id="floatingPassword"
                   placeholder="Password"
                 />
-                <label for="floatingPassword">Senha</label>
               </div>
 
-              <div class="checkbox mb-3">
+              <div class="p-1 checkbox mb-3">
                 <label>
                   <input type="checkbox" value="remember-me" /> Lembrar senha
                 </label>
               </div>
-              <button class="w-50 btn btn-lg btn-primary" type="submit">
-                Entrar
-              </button>
-              <p class="mt-5 mb-3 text-muted">&copy; 2022</p>
+              <div class="p-1">
+                <button class="w-100 btn-login btn-lg" type="submit">
+                  Entrar
+                </button>
+              </div>
+              <div class="p-2">
+                <p>Não é cadastrado? <a href="">Clique aqui</a></p>
+                <p class="mt-2 mb-3 text-muted">&copy; 2022</p>
+              </div>
             </form>
           </main>
         </div>

@@ -245,19 +245,10 @@ body .title {
   width: 3rem;
 }
 
-#conteudo .card {
-  transition: all 0.8s;
-  padding: 0px 0px;
-}
-
-#conteudo .card:hover {
-  opacity: 0.8;
-}
-
 /* ========================================== */
 /* BOTÃO DO FORMULÁRIO INSCRIÇÃO*/
 /* ========================================== */
-
+/* 
 #newsletter .col {
   display: flex;
   align-items: center;
@@ -275,7 +266,7 @@ body .title {
 
 .btnnewsform:hover {
   background-color: #9b6e4f;
-}
+} */
 
 /*************************************About  ***********************************************/
 #about {
@@ -325,6 +316,11 @@ body .title {
   height: 100%;
   box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.3);
   border: none;
+  transition: all 0.8s;
+  padding: 0;
+}
+#conteudo .card:hover {
+  opacity: 0.8;
 }
 
 #conteudo .card img {
@@ -453,6 +449,11 @@ body .title {
   }
 
   /*************************** conteudo ****************/
+
+  #conteudo .container .row .col {
+    height: 100%;
+  }
+
   #conteudo .card {
     margin-bottom: 2rem;
     /* border: 1px solid red; */

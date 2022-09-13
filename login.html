@@ -27,7 +27,7 @@
       <div class="container">
         <div class="row">
           <main class="form-signin m-auto">
-            <form>
+            <form action="/" method="POST" name="form" id="form">
               <img
                 class="mb-3 mt-4"
                 src="images/logoexploradores.svg"
@@ -43,7 +43,9 @@
                   type="email"
                   class="form-control"
                   id="floatingInput"
-                  placeholder="nome@example.com"
+                  placeholder="nome@exemplo.com"
+                  maxlength="45"
+                  name="email"
                 />
               </div>
               <div class="p-2">
@@ -52,7 +54,9 @@
                   type="password"
                   class="form-control"
                   id="floatingPassword"
-                  placeholder="Password"
+                  placeholder="Senha"
+                  maxlength="45"
+                  name="password"
                 />
               </div>
 
@@ -62,7 +66,11 @@
                 </label>
               </div>
               <div class="p-1">
-                <button class="w-100 btn-login btn-lg" type="submit">
+                <button
+                  class="w-100 btn-login btn-lg"
+                  type="submit"
+                  onclick="validate()"
+                >
                   Entrar
                 </button>
               </div>
@@ -75,5 +83,6 @@
         </div>
       </div>
     </section>
+    <script defer src="validate.js"></script>
   </body>
 </html>

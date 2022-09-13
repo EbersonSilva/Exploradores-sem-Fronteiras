@@ -459,6 +459,15 @@ body .title {
 }
 
 /******************************* Pages *-*************************  */
+#archeology .container,
+#astronomy .container,
+#oceanography .container,
+#theStoneCode .container,
+#ufology .container {
+  max-width: 70%;
+  margin-bottom: 5rem;
+}
+
 #archeology,
 #astronomy,
 #oceanography,

@@ -393,6 +393,11 @@ body .title {
     color: var(--light-color);
     max-width: 1200px;
   }
+
+  #home .logo {
+    max-width: 70%;
+  }
+
   #home .row {
     text-align: center;
   }
@@ -463,9 +468,12 @@ body .title {
 #astronomy .container,
 #oceanography .container,
 #theStoneCode .container,
-#ufology .container {
+#ufology .container,
+#courses .container {
   max-width: 70%;
   margin-bottom: 5rem;
+  margin-top: 3rem;
+  /* border: 1px solid red; */
 }
 
 #archeology,

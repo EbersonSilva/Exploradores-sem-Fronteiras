@@ -391,7 +391,7 @@ body .title {
   }
 
   #home .logo {
-    max-width: 70%;
+    max-width: 90%;
   }
 
   #home .row {
@@ -472,7 +472,8 @@ body .title {
 #theStoneCode .container,
 #ufology .container,
 #courses .container {
-  max-width: 70%;
+  max-width: 1300px;
+  padding-left: 0 15px;
   margin-bottom: 5rem;
   margin-top: 3rem;
   /* border: 1px solid red; */

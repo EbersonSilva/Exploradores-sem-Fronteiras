@@ -39,13 +39,13 @@ body .title {
 }
 
 #header .nav-item a,
-#header .btn-login {
+#header .btn-registration {
   color: var(--dark-color);
   font-size: 0.9rem;
   font-weight: bold;
 }
 
-#header .btn-login {
+#header .btn-registration {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -59,7 +59,7 @@ body .title {
   transition: all 0.8s;
 }
 
-#header .btn-login:hover {
+#header .btn-registration:hover {
   background-color: #000;
   color: #fff;
 }
@@ -452,6 +452,7 @@ body .title {
 
   #conteudo .container .row .col {
     height: 100%;
+    border: 1px solid red;
   }
 
   #conteudo .card {

@@ -1,5 +1,5 @@
 CREATE TABLE alaein48_exploradores_sem_fronteiras. exploradores_users (
-    id INT(20) NULL AUTO_INCREMENT ,
+    id INT(20) NOT NULL AUTO_INCREMENT ,
     nomecompleto VARCHAR(60) NOT NULL ,
     email VARCHAR(50) NOT NULL ,
     telefone VARCHAR(15) NOT NULL ,

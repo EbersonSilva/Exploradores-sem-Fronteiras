@@ -382,6 +382,30 @@ body .title {
   body p {
     font-size: 1.3rem;
   }
+  #header .nav-item .nav-link {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  #header .dropdown-menu .dropdown-item {
+    font-size: 1.3rem;
+    text-align: center;
+    background-color: #9b6e4f;
+    color: aliceblue;
+  }
+
+  #header .nav-item a,
+  #header .btn-registration {
+    margin-top: 0.5rem;
+    color: var(--dark-color);
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+
+  #header .icon {
+    margin-left: 0.5rem;
+    font-size: 1.5rem;
+  }
 
   #home .container {
     display: flex;
